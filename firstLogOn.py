@@ -15,4 +15,4 @@ for c in introText:
     time.sleep(0.000001)
     
     
-call(['python', 'password_Manager.py'])
+call(['python', 'password_Manager.py']) 

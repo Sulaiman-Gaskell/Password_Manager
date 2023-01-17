@@ -6,6 +6,11 @@ from subprocess import call
 init()
 import keyboard
 
+def flush_input():
+    import msvcrt
+    while msvcrt.kbhit():
+        msvcrt.getch()
+
 clear = lambda: os.system('cls')
 
 
