@@ -2,6 +2,7 @@ import time
 import os
 from colorama import Fore, Back, Style, init
 import sys
+from subprocess import call
 init()
 import keyboard
 
@@ -32,3 +33,7 @@ while True:
             break
         
     clear()
+
+    if choice == 1:
+        call(['python','pStrength.py'])
+        exit()
