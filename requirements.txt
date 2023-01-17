@@ -1,2 +1,4 @@
 colorama==0.4.4
 keyboard==0.13.5
+tdqm==0.01
+pwinput==1.0.2
