@@ -13,3 +13,6 @@ Currently you can only check the strength of your password.\n\n'''
 for c in introText:
     print(Fore.GREEN + c, end='')
     time.sleep(0.000001)
+    
+    
+call(['python', 'password_Manager.py'])

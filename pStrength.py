@@ -21,5 +21,6 @@ while True:
         if keyboard.is_pressed('1'):
             break
         elif keyboard.is_pressed('2'):
+            clear()
             call(['python','password_Manager.py'])
             sys.exit()
