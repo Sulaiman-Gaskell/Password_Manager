@@ -5,7 +5,7 @@ import sys
 from subprocess import call
 init()
 
-introText = '''V1.0.0\n
+introText = '''V1.1.0\n
 Welcome to the Password Manager!
 Here you can store and generate passwords while checking the strength.
 Currently you can only check the strength of your password.\n\n'''
