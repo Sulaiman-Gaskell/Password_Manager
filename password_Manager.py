@@ -19,7 +19,8 @@ while True:
     time.sleep(0.1)
     print(Fore.YELLOW + '''1) Check password strength
 2) Managed saved passwords (Coming soon)
-3) Generate a new password (Coming soon)''')
+3) Generate a new password (Coming soon)
+4) Settings (Coming soon)''')
 
     while True:
         if keyboard.is_pressed('1'):
