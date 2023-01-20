@@ -20,11 +20,11 @@ clear()
 
 while True:
     clear()
-    print(Fore.RED + '''PLease note that this is in beta and therfore
+    print('''PLease note that this is in beta and therfore
 results may be incorrect\n\n''')
-    print(Fore.GREEN + 'What would you like to do:')
+    print('What would you like to do:')
     time.sleep(0.2)
-    print(Fore.BLUE + '\n1) Check password strength')
+    print('\n1) Check password strength')
     time.sleep(0.1)
     print('2) Return to main menu')
     
@@ -38,7 +38,7 @@ results may be incorrect\n\n''')
             
     clear()
     flush_input()
-    password = pwinput.pwinput(prompt = Fore.YELLOW + 'Enter the password to be checked: ', mask = '*')
+    password = pwinput.pwinput(prompt = 'Enter the password to be checked: ', mask = '*')
     points = 0
     
     
@@ -83,28 +83,41 @@ results may be incorrect\n\n''')
         if l in nums:
             points += 1
             
+       
+    with open('cPasswords.txt','r') as f:
+        cPL = f.readlines()
+        
+    for line in cPL:
+        if password == line.replace('\n',''):
+            points -= 100
+            
+
+            
     
-    for i in tqdm (range (100), desc=Fore.BLUE + 'Checking password...'):
+    for i in tqdm (range (100), desc='Checking password...'):
         time.sleep(0.001)    
     clear()
     if points < -2:
-        print(Fore.RED + 'Your password is extremly weak')
+        print('Your password is extremly weak')
     elif points == -2:
-        print(Fore.RED + 'Your password is very weak')
+        print('Your password is very weak')
     elif points == -1:
-        print(Fore.RED + 'Your password is weak')
+        print('Your password is weak')
     elif points == 0:
-        print(Fore.YELLOW + 'Your password is on the weaker side')
+        print('Your password is on the weaker side')
     elif points == 1:
-        print(Fore.YELLOW + 'Your password is neither strong or weak')
+        print('Your password is neither strong or weak')
     elif points == 2:
-        print(Fore.GREEN + 'Your password is strong')
+        print('Your password is strong')
     elif points == 3:
-        print(Fore.GREEN + 'Your password is very strong')
+        print('Your password is very strong')
     elif points > 3:
-        print(Fore.GREEN + 'Your password is extremly strong!')
+        print('Your password is extremly strong!')
         
-    print(Fore.BLUE + '\nPress enter to continue')
+    if points < -50:
+        print('\nThe password entered was identified as a common password')
+        
+    print('\nPress enter to continue')
     keyboard.wait('enter')
     
              
