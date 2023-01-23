@@ -72,7 +72,7 @@ results may be incorrect\n\n''')
     elif len(password) > 13:
         points += 2
         
-    sChars = ['@', '%', '+', '/', '\\', '\'', '!', '#', '$', '^', '?', ':', ',', '(', ')',\
+    sChars = ['@', '%', '+', '/', '|', r'\', r''', '!', '#', '$', '^', '?', ':', ',', '(', ')',\
 '{', '}', '[', ']', '~', '-', '.', '£', '"', '&', '_', '*']
     
     nums = '1 2 3 4 5 6 7 8 9 0'.split()
@@ -87,18 +87,40 @@ results may be incorrect\n\n''')
     with open('cPasswords.txt','r') as f:
         cPL = f.readlines()
         
-    for line in cPL:
+    for line in cPL: #check if password is in common password list
         if password == line.replace('\n',''):
             points -= 100
             
 
             
     
-    for i in tqdm (range (100), desc='Checking password...'):
+    for i in tqdm (range (100), desc='Checking password...'): #for loop for progress bar
         time.sleep(0.001)    
     clear()
+
+    #consider using switch statement here
+    match points:
+        case _ if points < -2:
+            print('Your password is extremely weak')        
+        case -2 :
+            print('Your password is very weak')
+        case -1:
+            print('Your password is weak')
+        case 0:
+            print('Your password is on the weaker side')
+        case 1:
+            print('Your password is neither strong or weak')
+        case 2:
+            print('Your password is strong')
+        case 3:
+            print('Your password is very strong')
+        case _ if points > 3:
+            print('Your password is extremely strong!')
+        case _:
+            print('\nThe password entered was identified as a common password')
+    '''
     if points < -2:
-        print('Your password is extremly weak')
+        print('Your password is extremely weak')
     elif points == -2:
         print('Your password is very weak')
     elif points == -1:
@@ -116,7 +138,7 @@ results may be incorrect\n\n''')
         
     if points < -50:
         print('\nThe password entered was identified as a common password')
-        
+    '''    
     print('\nPress enter to continue')
     keyboard.wait('enter')
     
