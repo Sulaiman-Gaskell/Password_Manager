@@ -93,11 +93,8 @@ results may be incorrect\n\n''')
             
 
             
-    
-    for i in tqdm (range (100), desc='Checking password...'): #for loop for progress bar
-        time.sleep(0.001)    
-    clear()
 
+    print('----------------------------------------\n\n')
     #consider using switch statement here
     match points:
         case _ if points < -2:
@@ -118,27 +115,7 @@ results may be incorrect\n\n''')
             print('Your password is extremely strong!')
         case _:
             print('\nThe password entered was identified as a common password')
-    '''
-    if points < -2:
-        print('Your password is extremely weak')
-    elif points == -2:
-        print('Your password is very weak')
-    elif points == -1:
-        print('Your password is weak')
-    elif points == 0:
-        print('Your password is on the weaker side')
-    elif points == 1:
-        print('Your password is neither strong or weak')
-    elif points == 2:
-        print('Your password is strong')
-    elif points == 3:
-        print('Your password is very strong')
-    elif points > 3:
-        print('Your password is extremly strong!')
-        
-    if points < -50:
-        print('\nThe password entered was identified as a common password')
-    '''    
+
     print('\nPress enter to continue')
     keyboard.wait('enter')
     

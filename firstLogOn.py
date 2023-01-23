@@ -20,7 +20,7 @@ elif colour == '3':
     print(Fore.MAGENTA + Back.BLACK + '')
     
 os.system('cls')
-introText = '''V1.2.0\n
+introText = '''V1.2.1\n
 Welcome to the Password Manager!
 Here you can store and generate passwords while checking the strength.\n\n'''
 
