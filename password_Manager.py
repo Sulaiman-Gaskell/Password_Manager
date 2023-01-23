@@ -26,7 +26,7 @@ while True:
         if keyboard.is_pressed('1'):
             call(['python','pStrength.py'])
             exit()
-            break
+            
         
         if keyboard.is_pressed('4'):
             call(['python','settings.py'])
