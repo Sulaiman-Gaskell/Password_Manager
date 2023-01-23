@@ -59,13 +59,13 @@ results may be incorrect\n\n''')
     if len(uppers) <= 5 or len(lowers) <= 5: #checks if password has less than 5 upper or lower case letters
         points -=3
         
-    lPassword = []
-    for l in password:
-        lPassword.append(l) #converts password to list (NOT NEEDED AS A STRING CAN BE TREATED AS AN IMMUATABLE LIST)
+    #lPassword = []
+    #for l in password:
+    #    lPassword.append(l) #converts password to list (NOT NEEDED AS A STRING CAN BE TREATED AS AN IMMUATABLE LIST)
 
-    if len(lPassword) <= 4:
+    if len(password) <= 4:
         points -= 2
-    elif len(lPassword) > 4 and len(lPassword) <= 6:
+    elif len(password) > 4 and len(password) <= 6:
         points -= 1
     elif len(password) > 8:
         points += 1
@@ -77,7 +77,7 @@ results may be incorrect\n\n''')
     
     nums = '1 2 3 4 5 6 7 8 9 0'.split() #list of numbers
         
-    for l in lPassword: #adds an extra point for each special character and number
+    for l in password: #adds an extra point for each special character and number
         if l in sChars:
             points += 1
         if l in nums:
