@@ -1,3 +1,6 @@
+V1.2.2:
+    Improved code maintainability
+
 V1.2.1:
     Improvements:
         quicker password strength checking time
