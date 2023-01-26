@@ -3,7 +3,7 @@ import os
 from colorama import Fore, Back, Style, init
 import sys
 from subprocess import call
-from tqdm import tqdm
+import tqdm
 init()
 import keyboard
 import pwinput
@@ -40,6 +40,7 @@ results may be incorrect\n\n''')
     flush_input()
     password = pwinput.pwinput(prompt = 'Enter the password to be checked: ', mask = '*') #gets password to be checked and masks it with '*'
     points = 0
+    print('\n\n')
     
     
     uppers = [u for u in password if u.isupper()] #gets list of upper case letters in password
@@ -84,12 +85,23 @@ results may be incorrect\n\n''')
             points += 1
             
        
-    with open('cPasswords.txt','r') as f: 
-        cPL = f.readlines()
-        
+    with tqdm.tqdm(total=os.path.getsize('cPasswords.txt'),desc = 'Checking Password...') as pbar:
+        with open('cPasswords.txt', "rb") as f:
+            for l in f:
+                pbar.update(len(l))
+                
+            with open('cPasswords.txt','r') as fi: 
+                cPL = fi.readlines()
+                
+    print('\n\n') 
+    
+
     for line in cPL: #check if password is in common password list
         if password == line.replace('\n',''):
-            points -= 100
+            print('----------------------------------------')
+            print('\nThe password entered was identified as a common password')
+            print('Conisder changing it!')
+
             
 
             

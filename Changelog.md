@@ -1,3 +1,8 @@
+V1.2.3:
+    NEW: an actual progress bar when checking password strength
+    REWORK: Your password is no longer set to very weak if identifed as a common password
+            You are advised to change it now.
+
 V1.2.2:
     Improved code maintainability
 
