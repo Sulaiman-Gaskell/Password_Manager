@@ -6,7 +6,7 @@ from subprocess import call
 init()
 os.system('color 00')
 
-with open('appearance.txt','r') as f
+with open('appearance.txt','r') as f:
     colour = f.read()
 
 match colour:
