@@ -32,19 +32,24 @@ while True:
         print('2) Grey dark theme')
         time.sleep(0.1)
         print('3) Magenta dark theme')
-        print('\nEnter a theme number: (More coming soon!)')
+        time.sleep(0.1)
+        print('4) Blue dark theme')
+        time.sleep(0.1)
+        print('5) Fully purple theme')
+        time.sleep(0.1)
+        print('6) High contrast theme\n')
         while True:
             try:
                 flush_input()
-                choice = int(input())
-                if choice > 3 or choice < 1:
+                choice = int(input('Select a theme'))
+                if choice > 6 or choice < 1:
                     choice = int('f')
                 else:
                     s.write(str(choice))
                     clear()
                     s.close()
                     call(['python','firstLogOn.py'])
-                    exit()
+                    sys.exit()
                     break
             except:
                 print('\nOopsy that is invalid')

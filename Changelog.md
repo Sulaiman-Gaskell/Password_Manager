@@ -1,3 +1,13 @@
+V1.3.0:
+    NEW: More themes:
+        Blue dark
+        Fully purple
+        Classic
+    UPDATE: OLd themes have been updated
+    Bug fixes:
+        Issue with grey theme not being displayed properly
+        
+
 V1.2.3:
     NEW: an actual progress bar when checking password strength
     REWORK: Your password is no longer set to very weak if identifed as a common password
