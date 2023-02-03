@@ -100,7 +100,7 @@ results may be incorrect\n\n''')
         if password == line.replace('\n',''):
             print('----------------------------------------')
             print('\nThe password entered was identified as a common password')
-            print('Conisder changing it!')
+            print('Consider changing it!')
 
             
 
