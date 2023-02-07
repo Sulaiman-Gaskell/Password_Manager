@@ -31,7 +31,7 @@ match colour:
         os.system('color 00')
     
 os.system('cls')
-introText = '''V1.3.0\n
+introText = '''V1.4.0\n
 Welcome to the Password Manager!
 Here you can store and generate passwords while checking the strength.\n\n'''
 

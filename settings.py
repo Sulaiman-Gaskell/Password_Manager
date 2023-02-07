@@ -41,7 +41,7 @@ while True:
         while True:
             try:
                 flush_input()
-                choice = int(input('Select a theme'))
+                choice = int(input('Select a theme: '))
                 if choice > 6 or choice < 1:
                     choice = int('f')
                 else:

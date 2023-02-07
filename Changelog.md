@@ -1,3 +1,11 @@
+V1.4.0 (Updated requirments.txt):
+    NEW: Password generator:
+         Features include quick cycle through passwords and press c to automaticly copy the password
+         Select password length (>=8)
+    Bug fixes:
+        Broken UI in places
+
+
 V1.3.0:
     NEW: More themes:
         Blue dark
