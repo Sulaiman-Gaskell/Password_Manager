@@ -64,7 +64,7 @@ while True:
         clear()
         print(password + '\n-----------------------------------------------------------------------')
         print('This is your password')
-        print('\nDon\'t like it? Press \'Enter\' to generate a new password\nOr press \'c\' \
+        print('\nDon\'t like it? Press \'space\' to generate a new password\nOr press \'c\' \
 to copy current password to clipboard\nOr press \'n\' to finish')
         while True:
             if keyboard.is_pressed('space'):
