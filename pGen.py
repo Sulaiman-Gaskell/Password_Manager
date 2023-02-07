@@ -67,7 +67,7 @@ while True:
         print('\nDon\'t like it? Press \'Enter\' to generate a new password\nOr press \'c\' \
 to copy current password to clipboard\nOr press \'n\' to finish')
         while True:
-            if keyboard.is_pressed('enter'):
+            if keyboard.is_pressed('space'):
                 break
             elif keyboard.is_pressed('c'):
                 pyperclip.copy(password)

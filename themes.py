@@ -18,9 +18,7 @@ clear()
 
 print('1) Appearance')
 time.sleep(0.1)
-print('2) Password hider (coming soon)')
-time.sleep(0.1)
-print('3) Return to main menu')
+print('2) Return to main menu')
 print('\nWhat would you like to change?')
 
 while True:
@@ -54,10 +52,8 @@ while True:
             except:
                 print('\nOopsy that is invalid')
                 
-    elif keyboard.is_pressed('2'):
-        pass
     
-    elif keyboard.is_pressed('3'):
+    elif keyboard.is_pressed('2'):
         clear()
         call(['python', 'password_Manager.py'])
         exit()

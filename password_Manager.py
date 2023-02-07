@@ -19,17 +19,20 @@ while True:
     time.sleep(0.1)
     print('''1) Check password strength
 2) Managed saved passwords (Coming soon)
-3) Generate a new password (Coming soon)
-4) Settings''')
+3) Generate a new password
+4) Themes''')
 
     while True:
         if keyboard.is_pressed('1'):
             call(['python','pStrength.py'])
             exit()
             
+        elif keyboard.is_pressed('3'):
+            call(['python','pGen.py'])
+            exit()     
         
-        if keyboard.is_pressed('4'):
-            call(['python','settings.py'])
+        elif keyboard.is_pressed('4'):
+            call(['python','themes.py'])
             exit()
         
     clear()
